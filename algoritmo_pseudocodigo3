@@ -1,0 +1,46 @@
+Algoritmo para ganancia o perdida 
+1. Inicio
+2. Determinar el costo total de adquisición de los equipos
+3. Estimar la comisión basad el monto total de la adquisición
+4. calcular el total de la venta
+5. Estimar la comisión basada en el monto total de la venta
+6. calcular la perdida o ganancia de la venta 
+7. fin
+
+pseudocodigo 
+Start
+programa transacciones_electronicos
+
+// Detalles de la adquisición
+constante entero cantidad_equipos_adquisicion = 50
+constante flotante costo_adquisicion_por_equipo = 150
+constante flotante comision_adquisicion = 0.03
+
+// Detalles de la venta
+constant float cantidad_equipos_venta = 50
+constant float precio_venta_por_equipo = 175
+constant float comision_venta = 0.03
+
+// Calcular el total invertido en la adquisición
+variable float total_adquisicion = cantidad_equipos_adquisicion * costo_adquisicion_por_equipo
+
+// Calcular la comisión pagada al proveedor por la adquisición
+variable float comision_proveedor_adquisicion = total_adquisicion * comision_adquisicion
+
+// Calcular el total recibido por la venta
+variable float total_venta = cantidad_equipos_venta * precio_venta_por_equipo
+
+// Calcular la comisión pagada al proveedor por la venta
+variable float comision_proveedor_venta = total_venta * comision_venta
+
+// Calcular la ganancia o pérdida neta
+variable float resultado = total_venta - total_adquisicion - comision_proveedor_adquisicion - comision_proveedor_venta
+
+// Mostrar los resultados en $
+Mostrar "Total invertido en la adquisición de los equipos: $", total_adquisicion
+Mostrar "Comisión pagada al proveedor en la adquisición: $", comision_proveedor_adquisicion
+Mostrar "Total recibido por la venta de los equipos: $", total_venta
+Mostrar "Comisión pagada al proveedor en la venta: $", comision_proveedor_venta
+Mostrar "Ganancia o pérdida neta después de la venta: $", resultado
+
+End
